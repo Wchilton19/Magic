@@ -1,0 +1,657 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="WebForm1.aspx.vb" Inherits="Final.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+
+        .auto-style1 {
+            height: 39px;
+            width: 541px;
+        }
+        .auto-style8 {
+            width: 100%;
+        }
+        .auto-style9 {
+            width: 180px;
+        }
+        .auto-style10 {
+            height: 92px;
+        }
+        .auto-style11 {
+            margin-bottom: 5px;
+        }
+        .auto-style20 {
+            height: 37px;
+            width: 443px;
+        }
+        .auto-style21 {
+            height: 297px;
+            width: 536px;
+        }
+        .auto-style30 {
+            height: 37px;
+        }
+        .auto-style31 {
+            height: 38px;
+            width: 541px;
+        }
+        .auto-style32 {
+            height: 38px;
+            width: 443px;
+        }
+        .auto-style33 {
+            height: 41px;
+        }
+        .auto-style34 {
+            height: 41px;
+            width: 443px;
+        }
+        .auto-style35 {
+            height: 311px;
+            width: 642px;
+        }
+        .auto-style36 {
+            height: 39px;
+        }
+        .auto-style37 {
+            height: 39px;
+            width: 443px;
+        }
+        .auto-style38 {
+            height: 39px;
+            width: 409px;
+        }
+        .auto-style39 {
+            text-align: center;
+        }
+        .auto-style40 {
+            width: 455px;
+        }
+        .auto-style50 {
+            width: 77%;
+            height: 97px;
+        }
+        .auto-style52 {
+            width: 295px;
+        }
+        .auto-style55 {
+            width: 409px;
+        }
+        .auto-style56 {
+            width: 968px;
+        }
+        .auto-style57 {
+            width: 509px;
+            height: 444px;
+        }
+        .auto-style58 {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" enctype="multipart/form-data">
+        <div>
+            <asp:Panel ID="Panel1" runat="server" BackColor="#FF6600" BorderStyle="Solid" CssClass="auto-style11" Height="80px">
+                <table class="auto-style8">
+                    <tr>
+                        <td>
+                            <asp:ImageButton ID="ImageButton7" runat="server" BorderStyle="None" Enabled="False" Height="79px" ImageUrl="~/Comany Name.jpg" Width="97px" />
+                        </td>
+                        <td>&nbsp;</td>
+                        <td class="auto-style56">&nbsp;</td>
+                        <td>
+                            <asp:ImageButton ID="ImageButton8" runat="server" BorderStyle="None" Height="79px" ImageAlign="Right" ImageUrl="~/disconnect_logout_exit-512.png" Width="97px" />
+                        </td>
+                    </tr>
+                </table>
+            </asp:Panel>
+            <table class="auto-style8">
+                <tr>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="79px" ImageUrl="~/datamatrixicon.png" Width="86px" />
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton3" runat="server" Height="79px" ImageUrl="~/Update User.jpg" Width="86px" Visible="False" />
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton1" runat="server" Height="79px" ImageUrl="~/NewUser.png" Width="86px" Visible="False" />
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton2" runat="server" Height="79px" ImageUrl="~/NewCar.png" Width="86px" Visible="False" />
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton5" runat="server" Height="79px" ImageUrl="~/Maps.jpg" Width="86px" />
+                    </td>
+                    <td class="auto-style10">
+                        <asp:ImageButton ID="ImageButton6" runat="server" Height="79px" ImageUrl="~/About.png" Width="86px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Show Reports</td>
+                    <td>
+                        <asp:Label ID="Label4" runat="server" Text="Update User" Visible="False"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="Label5" runat="server" Text="New User" Visible="False"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:Label ID="Label6" runat="server" Text="New Vehicle " Visible="False"></asp:Label>
+                    </td>
+                    <td>Destinations</td>
+                    <td>About/Help</td>
+                </tr>
+            </table>
+        </div>
+        <asp:MultiView ID="MultiView2" runat="server" ActiveViewIndex="7">
+            <br />
+            <asp:View ID="View0" runat="server">
+                <table class="auto-style8">
+                    <tr>
+                        <td class="auto-style9">
+                            <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <AlternatingRowStyle BackColor="White" />
+                                <FooterStyle BackColor="#CCCC99" />
+                                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                <RowStyle BackColor="#F7F7DE" />
+                                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                <SortedAscendingHeaderStyle BackColor="#848384" />
+                                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                <SortedDescendingHeaderStyle BackColor="#575357" />
+                            </asp:GridView>
+                        </td>
+                        <td class="auto-style9">
+                            <asp:GridView ID="GridView2" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <AlternatingRowStyle BackColor="White" />
+                                <FooterStyle BackColor="#CCCC99" />
+                                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                <RowStyle BackColor="#F7F7DE" />
+                                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                <SortedAscendingHeaderStyle BackColor="#848384" />
+                                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                <SortedDescendingHeaderStyle BackColor="#575357" />
+                            </asp:GridView>
+                        </td>
+                        <td>
+                            <asp:GridView ID="GridView3" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <AlternatingRowStyle BackColor="White" />
+                                <FooterStyle BackColor="#CCCC99" />
+                                <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                <RowStyle BackColor="#F7F7DE" />
+                                <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                <SortedAscendingHeaderStyle BackColor="#848384" />
+                                <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                <SortedDescendingHeaderStyle BackColor="#575357" />
+                            </asp:GridView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style9">
+                            <asp:DropDownList ID="DDLDrivers1" runat="server" AutoPostBack="True" Height="16px">
+                            </asp:DropDownList>
+                            Worker</td>
+                        <td class="auto-style9">&nbsp;</td>
+                        <td>
+                            <asp:DropDownList ID="DDLVe" runat="server" AutoPostBack="True">
+                                <asp:ListItem>Start</asp:ListItem>
+                                <asp:ListItem Value="1">Honda</asp:ListItem>
+                                <asp:ListItem Value="2">Trailer</asp:ListItem>
+                                <asp:ListItem Value="3">Motocyle</asp:ListItem>
+                                <asp:ListItem Value="4">Truck</asp:ListItem>
+                                <asp:ListItem Value="5">Compact</asp:ListItem>
+                                <asp:ListItem Value="6">Simi</asp:ListItem>
+                                <asp:ListItem Value="7">Coffee</asp:ListItem>
+                            </asp:DropDownList>
+                            Vehicle </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <asp:Image ID="Image3" runat="server" Height="125px" Width="136px" />
+                <br />
+            </asp:View>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:View ID="View1" runat="server">
+                <br />
+                <table class="auto-style21">
+                    <tr>
+                        <td class="auto-style30">
+                            &nbsp;</td>
+                        <td class="auto-style20">
+                            <asp:DropDownList ID="DDLDrivers0" runat="server" AutoPostBack="True" Width="137px">
+                            </asp:DropDownList>
+                        </td>
+                        <td class="auto-style30">Vechicles Licensed </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Worker Name</td>
+                        <td class="auto-style37">
+                            <asp:TextBox ID="TxtUpdateW" runat="server"></asp:TextBox>
+                        </td>
+                        <td class="auto-style36">
+                            <asp:CheckBox ID="CHKHonda" runat="server" Text="Honda" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style30">Team Lead</td>
+                        <td class="auto-style20">
+                            <asp:DropDownList ID="DDLTL0" runat="server" AutoPostBack="True" Width="137px">
+                            </asp:DropDownList>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:CheckBox ID="CHKTrailer" runat="server" Text="Trailer" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style30">Phone Number</td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtPhoneNumber" runat="server" TextMode="Number"></asp:TextBox>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:CheckBox ID="CHKMotorcycle" runat="server" Text="Motorcycle" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style33">Adress</td>
+                        <td class="auto-style34">
+                            <asp:TextBox ID="txtNewAdress" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                        <td class="auto-style33">
+                            <asp:CheckBox ID="CHKTruck" runat="server" Text="Truck" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style30">Comment (300 letters max)</td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtNewComment" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:CheckBox ID="CHKCompact" runat="server" Text="Compact" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style30">User Photo</td>
+                        <td class="auto-style20">
+                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                        </td>
+                        <td class="auto-style30">
+                            <asp:CheckBox ID="CHKSimi" runat="server" Text="Simi" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style30">Password</td>
+                        <td class="auto-style20">
+                            <asp:TextBox ID="txtPasswordUpdate" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                        <td class="auto-style30">
+                            <asp:CheckBox ID="CHKCoffee" runat="server" Text="Coffee" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style31">
+                            <asp:Button ID="BTND" runat="server" Text="Delete User" />
+                        </td>
+                        <td class="auto-style32">
+                            <asp:Button ID="BTNCreateT" runat="server" Text="Update" />
+                        </td>
+                        <td class="auto-style31">
+                            &nbsp;</td>
+                    </tr>
+                </table>
+            </asp:View>
+            <br />
+            <asp:View ID="View2" runat="server">
+                <br />
+                <table class="auto-style35">
+                    <tr>
+                        <td class="auto-style36">Worker</td>
+                        <td class="auto-style38">
+                            <asp:TextBox ID="txtNewWorkerName0" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Team Lead</td>
+                        <td class="auto-style38">
+                            <asp:DropDownList ID="DDLTL1" runat="server" AutoPostBack="True" Width="137px">
+                            </asp:DropDownList>
+                            <br />
+                            <asp:CheckBox ID="CHKTLNEW" runat="server" Text="New Team Leader" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Phone Number</td>
+                        <td class="auto-style38">
+                            <asp:TextBox ID="txtPhoneNumber0" runat="server" TextMode="Number"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Adress</td>
+                        <td class="auto-style38">
+                            <asp:TextBox ID="txtNewAdress0" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Comment (300 letters max)</td>
+                        <td class="auto-style38">
+                            <asp:TextBox ID="txtNewComment0" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">User Photo</td>
+                        <td class="auto-style38">
+                            <asp:FileUpload ID="FileUpload3" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style36">Password</td>
+                        <td class="auto-style38">
+                            <asp:TextBox ID="txtPasswordNew" runat="server" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1"></td>
+                        <td class="auto-style38">
+                            <asp:Button ID="Button1" runat="server" Text="Submit" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            </asp:View>
+            <br />
+            <asp:View ID="View3" runat="server">
+                <br />
+                <table class="auto-style8">
+                    <tr>
+                        <td>Vehicle Nomination</td>
+                        <td>
+                            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Image</td>
+                        <td>
+                            <asp:FileUpload ID="FileUpload4" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Document/ Knowledge Test</td>
+                        <td>
+                            <asp:FileUpload ID="FileUpload5" runat="server" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Remove Vehicle</td>
+                        <td>
+                            <asp:DropDownList ID="DDLVe0" runat="server" AutoPostBack="True">
+                                <asp:ListItem>Start</asp:ListItem>
+                                <asp:ListItem Value="1">Honda</asp:ListItem>
+                                <asp:ListItem Value="2">Trailer</asp:ListItem>
+                                <asp:ListItem Value="3">Motocyle</asp:ListItem>
+                                <asp:ListItem Value="4">Truck</asp:ListItem>
+                                <asp:ListItem Value="5">Compact</asp:ListItem>
+                                <asp:ListItem Value="6">Simi</asp:ListItem>
+                                <asp:ListItem Value="7">Coffee</asp:ListItem>
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style58"></td>
+                        <td class="auto-style58">
+                            <asp:Button ID="Button2" runat="server" Text="Submit" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+            </asp:View>
+            <br />
+            <asp:View ID="View4" runat="server">
+                <div class="auto-style39">
+                    Main Destentions.&nbsp;<br />
+                    <br />
+                </div>
+                <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" RepeatDirection="Horizontal">
+                    <asp:ListItem Selected="True" Value="5">Home</asp:ListItem>
+                    <asp:ListItem Value="6">Meeting Point</asp:ListItem>
+                    <asp:ListItem Value="7">Team Building</asp:ListItem>
+                </asp:RadioButtonList>
+                <asp:MultiView ID="MultiView3" runat="server" ActiveViewIndex="0">
+                    <br />
+                    <asp:View ID="View6" runat="server">
+                        <iframe id="I3" allowfullscreen="" frameborder="0" height="300" name="I3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2734.957337353934!2d-117.17054678406765!3d46.7263029791362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549f86ff6a8470bb%3A0x14b8814c94007e94!2sZoe+Coffee+and+Kitchen!5e0!3m2!1sen!2sus!4v1543389086821" style="border:0" width="400"></iframe>
+                        <div class="place-name" jsan="7.place-name" jstcache="36" style="color: black; font-family: Roboto, Arial; font-size: 14px; user-select: text; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            Zoe Coffee and Kitchen</div>
+                        <div class="address" jsan="7.address" jstcache="37" style="color: rgb(91, 91, 91); font-family: Roboto, Arial; font-size: 12px; user-select: text; margin-top: 6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            1005 E Main St, Pullman, WA 99163</div>
+                    </asp:View>
+                    <br />
+                    <asp:View ID="View7" runat="server">
+                        <iframe id="I2" allowfullscreen="" frameborder="0" height="300" name="I2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25908880.54425669!2d-123.39490720188009!3d37.56201009154418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906810dbc7c3b3%3A0x68815310d9461ac2!2sFry's!5e0!3m2!1sen!2sus!4v1543388868982" style="border:0" width="400"></iframe>
+                        <div class="place-name" jsan="7.place-name" jstcache="36" style="color: black; font-family: Roboto, Arial; font-size: 14px; user-select: text; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            Fry&#39;s</div>
+                        <div class="address" jsan="7.address" jstcache="37" style="color: rgb(91, 91, 91); font-family: Roboto, Arial; font-size: 12px; user-select: text; margin-top: 6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            800 Garden Ave N, Renton, WA 98057</div>
+                    </asp:View>
+                    <br />
+                    <br />
+                    <asp:View ID="View8" runat="server">
+                        <iframe id="I1" allowfullscreen="" frameborder="0" height="300" name="I1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43760.005316709634!2d-117.04677760662858!3d46.72545495873305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a0277eb0ab9eab%3A0xd04b3dbdfe0a1698!2sTapped+-+Taphouse+%26+Kitchen!5e0!3m2!1sen!2sus!4v1543389220456" style="border:0" width="400"></iframe>
+                        <div class="place-name" jsan="7.place-name" jstcache="36" style="color: black; font-family: Roboto, Arial; font-size: 14px; user-select: text; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-weight: 500; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            Tapped - Taphouse &amp; Kitchen</div>
+                        <div class="address" jsan="7.address" jstcache="37" style="color: rgb(91, 91, 91); font-family: Roboto, Arial; font-size: 12px; user-select: text; margin-top: 6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial;">
+                            210 S Main St, Moscow, ID 83843</div>
+                    </asp:View>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </asp:MultiView>
+                <br />
+            </asp:View>
+            <br />
+            <asp:View ID="View5" runat="server">
+                &nbsp;<table class="auto-style8">
+                    <tr>
+                        <td class="auto-style40">&nbsp;</td>
+                        <td>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:LinkButton ID="LinkButton1" runat="server">Suggest Improvment</asp:LinkButton>
+                        </td>
+                        <td>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:LinkButton ID="LinkButton2" runat="server">Who we Are</asp:LinkButton>
+                        </td>
+                        <td>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:LinkButton ID="LinkButton3" runat="server">Common Resources</asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+                <table class="auto-style8">
+                    <tr>
+                        <td class="auto-style40">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style40">
+                            <img alt="Image result for insanity company" class="irc_mi" height="400" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" src="https://pbs.twimg.com/profile_images/1023997643746365440/Y6DbI08M_400x400.jpg" style="margin-top: 87px;" width="400" />
+                        </td>
+                        <td>
+                            <asp:MultiView ID="MultiView4" runat="server" ActiveViewIndex="1">
+                                <br />
+                                <asp:View ID="View9" runat="server">
+                                    <table class="auto-style50">
+                                        <tr>
+                                            <td class="auto-style55">
+                                                <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal" Width="398px">
+                                                    <asp:ListItem Value="0">Worst Thing Ever</asp:ListItem>
+                                                    <asp:ListItem Value="1">Its Something</asp:ListItem>
+                                                    <asp:ListItem Value="2">Wow it didn&#39;t crash</asp:ListItem>
+                                                    <asp:ListItem Value="4">Works I guess, good job.</asp:ListItem>
+                                                </asp:RadioButtonList>
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style55">
+                                                <asp:TextBox ID="TextBox3" runat="server" TextMode="MultiLine" Width="391px"></asp:TextBox>
+                                            </td>
+                                            <td>
+                                                <asp:Button ID="Button3" runat="server" Text="Button" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </asp:View>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <asp:View ID="View10" runat="server">
+                                    &nbsp;<table class="auto-style8">
+                                        <tr>
+                                            <td>We Are Insane Company
+                                                <br />
+                                                We exist for only two reasons.
+                                                <br />
+                                                To Get Drunk, and
+                                                <br />
+                                                Take Over the Wold!!!!</td>
+                                            <td>&nbsp;<asp:Image ID="Image2" runat="server" BorderStyle="None" Height="353px" ImageUrl="~/NewFolder1/pinky-and-the-brain-quote.jpg" Width="395px" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </asp:View>
+                                <br />
+                                <br />
+                                <br />
+                                <asp:View ID="View11" runat="server">
+                                    <table class="auto-style8">
+                                        <tr>
+                                            <td class="auto-style52">Description</td>
+                                            <td>Link</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style52">Pay Stubs</td>
+                                            <td><a href="https://mypay.dfas.mil/">PAY</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style52">TM And FM </td>
+                                            <td><a href="https://armypubs.army.mil/ProductMaps/PubForm/FM.aspx">Publications </a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style52">Online Portal to through Skillport</td>
+                                            <td><a href="https://usarmy.skillport.com/skillportfe/custom/login/usarmy/login.action">Online Traing</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style52">Weekly Moral Video</td>
+                                            <td><a href="https://youtu.be/qzZmU0aGmcc">Video</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="auto-style52">&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <br />
+                                    <br />
+                                </asp:View>
+                                <br />
+                            </asp:MultiView>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style40">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+            </asp:View>
+            <asp:View ID="View12" runat="server"><iframe src="https://supermarioemulator.com/mario.php" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no" class="auto-style57"></iframe>
+            </asp:View>
+            <br />
+            <asp:View ID="View13" runat="server">
+                <br />
+                <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True">
+                    <asp:ListItem>Auto Login</asp:ListItem>
+                    <asp:ListItem Value="1">Mario(Worker)</asp:ListItem>
+                    <asp:ListItem Value="2">Pika(TeamLead)</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <br />
+                <br />
+                <table class="auto-style38">
+                    <tr>
+                        <td>WorkerID</td>
+                        <td>
+                            <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                            <asp:Label ID="Label3" runat="server" Text="Label" Visible="False"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>PassWord</td>
+                        <td>
+                            <asp:TextBox ID="TextBox4" runat="server" TextMode="Password"></asp:TextBox>
+                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>
+                            <asp:Button ID="BTNlogin" runat="server" Text="Login" />
+                            <asp:Label ID="Label7" runat="server" Text="Label" Visible="False"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </asp:View>
+            <br />
+            <br />
+            <br />
+            <br />
+        </asp:MultiView>
+    </form>
+</body>
+</html>
